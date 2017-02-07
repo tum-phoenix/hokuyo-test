@@ -34,6 +34,11 @@ int main(int argc, char *argv[]) {
         return EXIT_FAILURE;
     }
 
+    if(myMeasurement.size() == 0) {
+        std::cerr << "Measurement is empty" << std::endl;
+        return EXIT_FAILURE;
+    }
+
     urg.stop_measurement();
 
     urg.close();
