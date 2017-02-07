@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 2.8)
 project(hokuyo-test)
 
 add_definitions(-std=c++11)
+link_directories(/usr/local/lib)
 
 set(SOURCE src/hokuyo-test.cpp)
 
