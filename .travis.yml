@@ -1,0 +1,18 @@
+dist: trusty
+sudo: required
+language: cpp
+compiler:
+  - clang
+  - gcc
+
+before_install:
+  - wget https://downloads.sourceforge.net/project/urgnetwork/urg_library/urg_library-1.2.0.zip
+  - unzip urg_library-1.2.0.zip
+  - cd urg_library-1.2.0
+  - make && sudo make install
+  - cd ..
+
+script:
+  - mkdir build
+  - cd build
+  - cmake .. && make
